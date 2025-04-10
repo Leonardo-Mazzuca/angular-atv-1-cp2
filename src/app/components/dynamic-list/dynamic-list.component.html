@@ -1,0 +1,19 @@
+
+
+<h1>
+  Exercício 2
+</h1>
+
+<p>
+  Lista de frutas
+</p>
+
+@for (fruit of fruitList; track $index) {
+  <p>
+    {{fruit}}
+  </p>
+} @empty {
+  <span>Lista está vazia!</span>
+}
+
+
