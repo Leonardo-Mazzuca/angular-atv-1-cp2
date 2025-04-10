@@ -1,0 +1,52 @@
+// Estilização para a tabela
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  thead {
+    background-color: #007BFF;
+    color: white;
+
+    th {
+      padding: 12px 15px;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+
+      &:nth-child(even) {
+        background-color: #e9ecef;
+      }
+
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+
+  // Estilo para bordas
+  td, th {
+    border: 1px solid #ddd;
+  }
+
+  // Adiciona uma borda nas células ao focar ou selecionar
+  td:focus, th:focus {
+    outline: none;
+    border-color: #0056b3;
+  }
+}

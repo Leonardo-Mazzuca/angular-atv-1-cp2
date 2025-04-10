@@ -1,0 +1,29 @@
+
+
+<h1>
+  Exercício 3
+</h1>
+
+<div>
+  <button (click)="increaseAge()">
+    Aumentar idade
+  </button>
+  <p>
+    {{age}}
+  </p>
+  <button (click)="decreaseAge()">
+    Diminuir idade
+  </button>
+</div>
+
+@if (this.age > 18) {
+  <p>
+    Acesso permitido
+  </p>
+} @else {
+  <p>
+    Acesso negado
+  </p>
+}
+
+

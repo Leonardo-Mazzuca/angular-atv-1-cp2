@@ -1,0 +1,29 @@
+
+
+<h1>
+  Exercício 7
+</h1>
+
+<label id="values">
+  troque o valor!
+</label>
+
+<input id="values" (change)="changeValue($event)" />
+
+@switch (currentValue) {
+  @case (1) {
+    <p>
+      UM
+    </p>
+  }
+  @case ("dois") {
+    <p>
+      DOIS
+    </p>
+  }
+  @default {
+    <p>
+      Valor desconhecido
+    </p>
+  }
+}

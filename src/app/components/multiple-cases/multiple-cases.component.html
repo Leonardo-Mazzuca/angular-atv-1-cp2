@@ -1,0 +1,39 @@
+
+
+<h1>
+  Exercício 5
+</h1>
+
+<label for="status">
+  Alterar status
+</label>
+<select name="status" id="status" (change)="changeStatus($event)">
+  @for (item of status; track $index) {
+    <option value={{item}}>
+      {{item}}
+    </option>
+  }
+</select>
+
+<div class="status-container">
+  <h2>
+    Status:
+  </h2>
+  @switch (currentStatus) {
+    @case ("Pendente") {
+      <span class="pending">Aguardando confirmação</span>
+    }
+    @case ("Enviado") {
+      <span class="send">Pedido a caminho</span>
+    }
+    @case ("Entregue") {
+      <span class="delivered">Pedido entregue</span>
+    }
+    @default {
+      <span class="unknow">Status desconhecido</span>
+    }
+  }
+
+
+</div>
+

@@ -1,0 +1,31 @@
+
+<h1>
+  Exercício 9
+</h1>
+
+<div class="product-section">
+
+  @for (product of products; track product.id) {
+
+    <div class="product-card">
+      @if (product.promocao) {
+        <p class="promotion">
+          {{product.name}}
+        </p>
+      } @else {
+        <p>
+          {{product.name}}
+        </p>
+      }
+
+      <p class="price">
+        R${{product.price}}
+      </p>
+    </div>
+  } @empty {
+    <p>
+      Sem produtos disponíveis!
+    </p>
+  }
+
+</div>

@@ -1,0 +1,20 @@
+<h1>Exercício 6</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (classmate of classmates; track classmate.name) {
+      <tr>
+        <td>{{ classmate.id }}</td>
+        <td>{{ classmate.name }}</td>
+        <td>{{ classmate.age }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

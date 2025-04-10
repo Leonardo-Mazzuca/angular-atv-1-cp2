@@ -1,0 +1,38 @@
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+
+  h2 {
+    font-size: 18px;
+    color: #444;
+  }
+
+  span {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .pending {
+    background-color: #f4e142;
+    color: #333;
+  }
+
+  .send {
+    background-color: #4fc3f7;
+    color: #fff;
+  }
+
+  .delivered {
+    background-color: #4caf50;
+    color: #fff;
+  }
+
+  .unknow {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+}

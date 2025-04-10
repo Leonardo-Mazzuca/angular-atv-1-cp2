@@ -1,0 +1,24 @@
+
+
+<h1>
+  Exercício 4
+</h1>
+
+<h2>
+  Lista de tarefas
+</h2>
+
+@for (errand of errands; track $index) {
+  <div class="errand-container">
+    <p>
+      {{errand}}
+    </p>
+    <button (click)="removeErrand($index)">
+      Remover tarefa
+    </button>
+  </div>
+} @empty {
+  <p>
+    A lista de tarefas está vazia!!
+  </p>
+}
