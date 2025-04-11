@@ -12,9 +12,8 @@ export class CalculatorComponent {
 
   value1 = 0;
   value2 = 0;
-  currentType:CalcType = "adicao"
-  calcTypes:CalcType[] = ["adicao", "divisao", "multiplicacao", "subtracao"]
-  result = 0;
+  operation:CalcType = "adicao"
+  operations:CalcType[] = ["adicao", "divisao", "multiplicacao", "subtracao"]
 
   setValue1 (event:Event) {
     this.value1 = Number((event.target as HTMLInputElement).value)
@@ -24,11 +23,9 @@ export class CalculatorComponent {
     this.value2 = Number((event.target as HTMLInputElement).value)
   }
 
-  setType (event:Event) {
-    const value = (event.target as HTMLSelectElement).value;
-    this.currentType = value as CalcType
+  setOperation (event:Event) {
+    this.operation = (event.target as HTMLSelectElement).value as CalcType
   }
 
- 
 
 }

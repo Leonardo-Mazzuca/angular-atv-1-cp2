@@ -3,8 +3,52 @@
   Exercício 10
 </h1>
 
+<label>
+  Valor 1
+</label>
+<input
+  type="number"
+  (change)="setValue1($event)"
+/>
+
+<label>
+  Valor 2
+</label>
+<input
+  type="number"
+  (change)="setValue2($event)"
+/>
+
 <div>
-  
+  <label id="ops">
+    Operações
+  </label>
+  <select (change)="setOperation($event)"  id="ops">
+    @for (item of operations; track $index) {
+      <option value={{item}}>
+        {{item}}
+      </option>
+    }
+  </select>
 </div>
 
-
+@switch (operation) {
+ @case ("adicao") {
+  <p>
+    {{value1 + value2}}
+  </p>
+ }
+ @case ("subtracao") {
+  {{value1 - value2}}
+ }
+ @case ("multiplicacao") {
+  {{value1 * value2}}
+ }
+ @case ("divisao") {
+  @if (value1 === 0 || value2 === 0) {
+    <p>Erro! Divisão por 0</p>
+  } @else {
+    <p>{{value1 / value2}}</p>
+  }
+ }
+}
